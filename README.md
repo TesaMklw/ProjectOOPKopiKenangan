@@ -1,3 +1,5 @@
+# ProjectOOPKopiKenangan
+Project untuk mengimplementasikan pemrograman berbasis objek dalam pembuatan program order kopi kenangan berdasarkan analisis struk belanja kopi kenangan.
 ## Getting Started
 
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
