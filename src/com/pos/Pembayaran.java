@@ -14,7 +14,6 @@ public class Pembayaran {
     public Pembayaran(){
         System.out.print("Metode Pembayaran = ");
         String metodePembayaran = inputUser.nextLine(); 
-        setMetodePembayaran(metodePembayaran);
     }
 
     // setters dan getters
@@ -22,7 +21,7 @@ public class Pembayaran {
         this.metodePembayaran = metodePembayaran;
     }
 
-    public void getMetodePembayaran(){
+    public String getMetodePembayaran(){
         return metodePembayaran;
     }
 }

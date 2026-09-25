@@ -1,11 +1,12 @@
 package com.pos;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Transaksi {
     private String idTransaksi;
     private Gerai gerai;
-    // - listProduk: ArrayList<Produk>
+    private ArrayList<Produk> listProduk;
     private String subtotalTransaksi;
     private String totalTransaksi;
     private float uangKembali;
@@ -16,9 +17,11 @@ public class Transaksi {
     Scanner inputUser = new Scanner(System.in);
 
     // Constructor 1
-    public Transaksi (String idTransaksi, Gerai gerai, String subtotalTransaksi, String totalTransaksi, float uangKembali, Pelanggan pelanggan, String tanggalTransaksi, MetodePembayaran pembayaran){
+    public Transaksi (String idTransaksi, Gerai gerai, String subtotalTransaksi, String totalTransaksi, 
+        float uangKembali, Pelanggan pelanggan, String tanggalTransaksi, MetodePembayaran pembayaran){
         this.idTransaksi = idTransaksi;
         this.gerai = gerai;
+        this.listProduk = new ArrayList<>();
         this.subtotalTransaksi = subtotalTransaksi;
         this.totalTransaksi = totalTransaksi;
         this.uangKembali = uangKembali;
@@ -29,7 +32,7 @@ public class Transaksi {
 
     // Constructor 2
     public Transaksi (){
-
+        this.listProduk = new ArrayList<>();
     }
 
     // setters
@@ -66,35 +69,39 @@ public class Transaksi {
     }
 
     //  dan getters
-    public void getIdTransaksi(){
+    public String getIdTransaksi(){
         return idTransaksi;
     }
 
-    public void getGerai(){
+    public Gerai getGerai(){
         return gerai;
     }
 
-    public void getSubtotalTransaksi(){
+    public ArrayList<produk> getListProduk() {
+        return listProduk;
+    }
+
+    public String getSubtotalTransaksi(){
         return subtotalTransaksi;
     }
 
-    public void getTotalTransaksi(){
+    public String getTotalTransaksi(){
         return totalTransaksi;
     }
 
-    public void getUangKembali(){
+    public float getUangKembali(){
         return uangKembali;
     }
 
-    public void getPelanggan(){
+    public Pelanggan getPelanggan(){
         return pelanggan;
     }
 
-    public void getTanggalTransaksi(){
+    public String getTanggalTransaksi(){
         return tanggalTransaksi;
     }
 
-    public void getPembayaran( ){
+    public Pembayaran getPembayaran( ){
         return pembayaran;
     }
 }
