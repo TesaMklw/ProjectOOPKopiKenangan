@@ -17,7 +17,7 @@ public class Pembayaran {
     }
 
     // setters dan getters
-    public void setMetodePembayaran(Pembayaran metodePembayaran){
+    public void setMetodePembayaran(String metodePembayaran){
         this.metodePembayaran = metodePembayaran;
     }
 
