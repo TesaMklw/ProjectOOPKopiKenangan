@@ -1,4 +1,4 @@
-package com.pos;
+package com.pos.interfaces;
 
 public interface Cetak {
     void struk();

@@ -1,4 +1,4 @@
-package com.pos;
+package com.pos.pembayaran;
 
 import java.util.Scanner;
 

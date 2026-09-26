@@ -1,7 +1,13 @@
-package com.pos;
+package com.pos.transaksi;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import com.pos.gerai.Gerai;
+import com.pos.pelanggan.Pelanggan;
+import com.pos.pembayaran.Pembayaran;
+
+//import com.pos.transaksi.Produk;
 
 public class Transaksi {
     private String idTransaksi;
@@ -17,8 +23,8 @@ public class Transaksi {
     Scanner inputUser = new Scanner(System.in);
 
     // Constructor 1
-    public Transaksi (String idTransaksi, Gerai gerai, String subtotalTransaksi, String totalTransaksi, 
-        float uangKembali, Pelanggan pelanggan, String tanggalTransaksi, MetodePembayaran pembayaran){
+    public Transaksi(String idTransaksi, Gerai gerai, String subtotalTransaksi, String totalTransaksi,
+                     float uangKembali, Pelanggan pelanggan, String tanggalTransaksi, Pembayaran pembayaran) {
         this.idTransaksi = idTransaksi;
         this.gerai = gerai;
         this.listProduk = new ArrayList<>();
@@ -31,77 +37,77 @@ public class Transaksi {
     }
 
     // Constructor 2
-    public Transaksi (){
+    public Transaksi() {
         this.listProduk = new ArrayList<>();
     }
 
     // setters
-    public void setIdTransaksi(String idTransaksi){
+    public void setIdTransaksi(String idTransaksi) {
         this.idTransaksi = idTransaksi;
     }
 
-    public void setGerai(Gerai gerai){
+    public void setGerai(Gerai gerai) {
         this.gerai = gerai;
     }
 
-    public void setSubtotalTransaksi(String subtotalTransaksi){
+    public void setSubtotalTransaksi(String subtotalTransaksi) {
         this.subtotalTransaksi = subtotalTransaksi;
     }
 
-    public void setTotalTransaksi(String totalTransaksi){
+    public void setTotalTransaksi(String totalTransaksi) {
         this.totalTransaksi = totalTransaksi;
     }
 
-    public void setUangKembali(float uangKembali){
+    public void setUangKembali(float uangKembali) {
         this.uangKembali = uangKembali;
     }
 
-    public void setPelanggan(Pelanggan pelanggan){
+    public void setPelanggan(Pelanggan pelanggan) {
         this.pelanggan = pelanggan;
     }
 
-    public void setTanggalTransaksi(String tanggalTransaksi){
+    public void setTanggalTransaksi(String tanggalTransaksi) {
         this.tanggalTransaksi = tanggalTransaksi;
     }
 
-    public void setPembayaran(Pembayaran pembayaran){
+    public void setPembayaran(Pembayaran pembayaran) {
         this.pembayaran = pembayaran;
     }
 
-    //  dan getters
-    public String getIdTransaksi(){
+    // getters
+    public String getIdTransaksi() {
         return idTransaksi;
     }
 
-    public Gerai getGerai(){
+    public Gerai getGerai() {
         return gerai;
     }
 
-    public ArrayList<produk> getListProduk() {
+    public ArrayList<Produk> getListProduk() {
         return listProduk;
     }
 
-    public String getSubtotalTransaksi(){
+    public String getSubtotalTransaksi() {
         return subtotalTransaksi;
     }
 
-    public String getTotalTransaksi(){
+    public String getTotalTransaksi() {
         return totalTransaksi;
     }
 
-    public float getUangKembali(){
+    public float getUangKembali() {
         return uangKembali;
     }
 
-    public Pelanggan getPelanggan(){
+    public Pelanggan getPelanggan() {
         return pelanggan;
     }
 
-    public String getTanggalTransaksi(){
+    public String getTanggalTransaksi() {
         return tanggalTransaksi;
     }
 
-    public Pembayaran getPembayaran( ){
+    public Pembayaran getPembayaran() {
         return pembayaran;
     }
 }
